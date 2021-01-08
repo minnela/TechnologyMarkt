@@ -28,12 +28,23 @@ public class MobilePhone {
     @Column(name="color")
     private String color;
 
+    @Column(name="comment")
+    private String comment;
+
     public MobilePhone(String name, String brand) {
         this.name = name;
         this.brand = brand;
     }
 
     public MobilePhone() {
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     public int getId() {

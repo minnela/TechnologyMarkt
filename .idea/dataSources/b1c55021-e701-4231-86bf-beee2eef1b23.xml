@@ -945,6 +945,7 @@ false posixrules
     </table>
     <table id="32" parent="14" name="mobile_phone">
       <ObjectId>98312</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>1149</StateNumber>
     </table>

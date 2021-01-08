@@ -26,6 +26,8 @@ public class Computer {
     @Column(name="screen_size")
     private double screenSize;
 
+    @Column(name="comment")
+    private String comment;
 
     public Computer(String brand, String name) {
         this.brand = brand;
@@ -33,6 +35,14 @@ public class Computer {
     }
 
     public Computer() {
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     public int getId() {
