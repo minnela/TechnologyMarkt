@@ -1,6 +1,7 @@
 package com.technology.markt.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Entity
