@@ -3,14 +3,8 @@ package com.technology.markt.domain;
 import javax.persistence.*;
 import java.util.List;
 
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@Entity
-@Table(name = "device_table")
+@MappedSuperclass
 public abstract class Devices {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
 
     @Column(name="brand")
     private String brand;
@@ -30,8 +24,6 @@ public abstract class Devices {
     @Column(name="screen_size")
     private double screenSize;
 
-    @Column(name="comment")
-    private String comment;
 
     public Devices() {
     }
@@ -89,11 +81,4 @@ public abstract class Devices {
         this.screenSize = screenSize;
     }
 
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
 }

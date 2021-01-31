@@ -34,56 +34,40 @@
         </ul>
     </div>
 </nav>
-<form class="needs-validation" th:action="@{/addComputer}" th:object="${computer}" th:method="post">
+<form class="needs-validation" th:action="@{/addComputer}" th:object="${comment}" th:method="post">
     <div class="form-column">
         <div class="col-md-4 mb-3">
-            <label for="validationTooltip01">Computer Name</label>
-            <input type="text" class="form-control" id="validationTooltip01" placeholder="Enter Computer Name" value="Mark" th:field="*{name}"/>
-            <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Item Type Error</small>
-            <div class="valid-tooltip">
-                Looks good!
-            </div>
+            <label for="validationTooltip02">Header</label>
+            <input type="text" class="form-control" id="validationTooltip02" placeholder="Enter Blog Header" />
         </div>
         <div class="col-md-4 mb-3">
-            <label for="validationTooltip02">Computer Brand</label>
-            <input type="text" class="form-control" id="validationTooltip02" placeholder="Enter Computer Brand" value="Otto" th:field="*{brand}"/>
-            <small th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}">Item Type Error</small>
-            <div class="valid-tooltip">
-                Looks good!
-            </div>
+            <label>Computer Brand</label>
+            <select th:field="*{compBrand}" class="form-control form-control-sm" id="compBrand">
+                <option value="">Select a Brand</option>
+                <option th:each="comp:${computers}"
+                        th:value="${comp.brand}"
+                        th:selected="${comp.brand}"
+                        th:text="${comp.brand}">
+                </option>
+            </select>
         </div>
         <div class="col-md-4 mb-3">
-            <label for="validationTooltipUsername">Computer color</label>
-            <div class="input-group">
-                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Enter Computer Color" aria-describedby="validationTooltipUsernamePrepend" th:field="*{color}"/>
-            </div>
+            <label>Computer Brand</label>
+            <select th:field="*{commentCompOs}" class="form-control form-control-sm" id="commentCompOs">
+                <option value="">Select a Brand</option>
+                <option th:each="comp:${computers}"
+                        th:value="${comp.os}"
+                        th:selected="${comp.os}"
+                        th:text="${comp.os}">
+                </option>
+            </select>
         </div>
     <div class="col-md-4 mb-3">
-        <label for="validationTooltipUsername">Computer Screen Size</label>
+        <label>Computer Comment</label>
         <div class="input-group">
-            <input type="text" class="form-control" id="validationTooltip04" placeholder="Enter Computer Screen Size" aria-describedby="validationTooltipUsernamePrepend" th:field="*{screenSize}"/>
+            <input type="text" class="form-control" id="validationTooltip07" placeholder="Enter Computer Comment" aria-describedby="validationTooltipUsernamePrepend" th:field="*{commentComp}"/>
         </div>
     </div>
-    <div class="col-md-4 mb-3">
-        <label for="validationTooltipUsername">Computer Operating System</label>
-        <div class="input-group">
-            <input type="text" class="form-control" id="validationTooltip05" placeholder="Enter Computer OS" aria-describedby="validationTooltipUsernamePrepend" th:field="*{os}"/>
-        </div>
-    </div>
-    <div class="col-md-4 mb-3">
-        <label for="validationTooltipUsername">Computer Production Year</label>
-        <div class="input-group">
-            <input type="text" class="form-control" id="validationTooltip06" placeholder="Enter Computer Production Year" aria-describedby="validationTooltipUsernamePrepend" th:field="*{productionYear}"/>
-        </div>
-    </div>
-        <div class="col-md-4 mb-3">
-            <label for="validationTooltipUsername">Computer Comment</label>
-            <div class="input-group">
-                <input type="text" class="form-control" id="validationTooltip07" placeholder="Enter Computer Comment" aria-describedby="validationTooltipUsernamePrepend" th:field="*{comment}"/>
-            </div>
-        </div>
-    </div>
-
 
     <button class="btn btn-primary" type="submit">Insert</button>
 </form>

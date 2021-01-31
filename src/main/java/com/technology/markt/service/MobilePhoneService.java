@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface MobilePhoneService {
     void addMobilePhone(MobilePhone mobilePhone);
-    public MobilePhone getMobilePhoneByName(String name);
-    public List<MobilePhone> getAllMobilePhones();
-    public void deleteMobilePhone(MobilePhone id);
+    MobilePhone getMobilePhoneByName(String name);
+    List<MobilePhone> getAllMobilePhones();
+    void deleteMobilePhone(MobilePhone id);
 }

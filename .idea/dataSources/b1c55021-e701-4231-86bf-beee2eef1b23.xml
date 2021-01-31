@@ -791,7 +791,7 @@ false posixrules
       <ObjectId>13318</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1270</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1410</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="3" parent="1" name="pg_execute_server_program">
@@ -843,7 +843,7 @@ false posixrules
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1271</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1411</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="15" parent="2" name="heap">
@@ -938,118 +938,123 @@ false posixrules
       <Owner>postgres</Owner>
       <StateNumber>1189</StateNumber>
     </table>
-    <table id="31" parent="14" name="comment_table">
-      <ObjectId>122888</ObjectId>
+    <table id="31" parent="14" name="comment_computer">
+      <ObjectId>122960</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1269</StateNumber>
+      <StateNumber>1405</StateNumber>
     </table>
     <table id="32" parent="14" name="computer">
       <ObjectId>98304</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1155</StateNumber>
+      <StateNumber>1326</StateNumber>
     </table>
-    <table id="33" parent="14" name="device_table">
-      <ObjectId>122880</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>1249</StateNumber>
-    </table>
-    <table id="34" parent="14" name="issue">
+    <table id="33" parent="14" name="issue">
       <ObjectId>16392</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>884</StateNumber>
     </table>
-    <table id="35" parent="14" name="mobile_phone">
+    <table id="34" parent="14" name="mobile_phone">
       <ObjectId>98312</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1156</StateNumber>
     </table>
-    <table id="36" parent="14" name="person">
+    <table id="35" parent="14" name="person">
       <ObjectId>106501</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1242</StateNumber>
     </table>
-    <table id="37" parent="14" name="score">
+    <table id="36" parent="14" name="score">
       <ObjectId>106509</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1168</StateNumber>
     </table>
-    <table id="38" parent="14" name="users">
+    <table id="37" parent="14" name="users">
       <ObjectId>16384</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>773</StateNumber>
     </table>
-    <column id="39" parent="30" name="id">
+    <column id="38" parent="30" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1165</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="40" parent="30" name="plaqueno">
+    <column id="39" parent="30" name="plaqueno">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1165</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="41" parent="30" name="score">
+    <column id="40" parent="30" name="score">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1165</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="42" parent="30" name="name">
+    <column id="41" parent="30" name="name">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1239</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="43" parent="30" name="city_pkey">
+    <index id="42" parent="30" name="city_pkey">
       <ObjectId>106499</ObjectId>
       <StateNumber>1189</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="44" parent="30" name="city_pkey">
+    <key id="43" parent="30" name="city_pkey">
       <ObjectId>106500</ObjectId>
       <StateNumber>1165</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>city_pkey</UnderlyingIndexName>
     </key>
-    <column id="45" parent="31" name="id">
+    <column id="44" parent="31" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1259</StateNumber>
+      <StateNumber>1404</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="46" parent="31" name="comment">
+    <column id="45" parent="31" name="comment_comp">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1259</StateNumber>
+      <StateNumber>1404</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="47" parent="31" name="name">
+    <column id="46" parent="31" name="comp_id">
       <Position>3</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>1269</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1404</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <index id="48" parent="31" name="comment_table_pkey">
-      <ObjectId>122891</ObjectId>
-      <StateNumber>1269</StateNumber>
+    <index id="47" parent="31" name="comment_computer_pkey">
+      <ObjectId>122963</ObjectId>
+      <StateNumber>1404</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="49" parent="31" name="comment_table_pkey">
-      <ObjectId>122892</ObjectId>
-      <StateNumber>1259</StateNumber>
+    <key id="48" parent="31" name="comment_computer_pkey">
+      <ObjectId>122964</ObjectId>
+      <StateNumber>1404</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
-      <UnderlyingIndexName>comment_table_pkey</UnderlyingIndexName>
+      <UnderlyingIndexName>comment_computer_pkey</UnderlyingIndexName>
     </key>
+    <foreign-key id="49" parent="31" name="fkmkni02xidb02pw5qqkt88gojv">
+      <ObjectId>122965</ObjectId>
+      <StateNumber>1405</StateNumber>
+      <ColNames>comp_id</ColNames>
+      <RefTableId>98304</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>computer</RefTableName>
+      <RefKeyName>computer_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
     <column id="50" parent="32" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
@@ -1093,97 +1098,21 @@ false posixrules
       <StateNumber>1148</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="57" parent="32" name="comment">
-      <Position>8</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1155</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="58" parent="32" name="computer_pkey">
+    <index id="57" parent="32" name="computer_pkey">
       <ObjectId>98310</ObjectId>
       <StateNumber>1148</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="59" parent="32" name="computer_pkey">
+    <key id="58" parent="32" name="computer_pkey">
       <ObjectId>98311</ObjectId>
       <StateNumber>1148</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>computer_pkey</UnderlyingIndexName>
     </key>
-    <column id="60" parent="33" name="dtype">
-      <Position>1</Position>
-      <DataType>varchar(31)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>1249</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="61" parent="33" name="id">
-      <Position>2</Position>
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>1249</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="62" parent="33" name="brand">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1249</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="63" parent="33" name="color">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1249</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="64" parent="33" name="comment">
-      <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1249</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="65" parent="33" name="name">
-      <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1249</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="66" parent="33" name="os">
-      <Position>7</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1249</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="67" parent="33" name="production_year">
-      <Position>8</Position>
-      <DataType>integer|0s</DataType>
-      <StateNumber>1249</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="68" parent="33" name="screen_size">
-      <Position>9</Position>
-      <DataType>double precision|0s</DataType>
-      <StateNumber>1249</StateNumber>
-      <TypeId>701</TypeId>
-    </column>
-    <index id="69" parent="33" name="device_table_pkey">
-      <ObjectId>122886</ObjectId>
-      <StateNumber>1249</StateNumber>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-      <Primary>1</Primary>
-    </index>
-    <key id="70" parent="33" name="device_table_pkey">
-      <ObjectId>122887</ObjectId>
-      <StateNumber>1249</StateNumber>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>device_table_pkey</UnderlyingIndexName>
-    </key>
-    <column id="71" parent="34" name="issueid">
+    <column id="59" parent="33" name="issueid">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1191,198 +1120,198 @@ false posixrules
       <DefaultExpression>nextval(&apos;test_id_sequ&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="72" parent="34" name="issueurgency">
+    <column id="60" parent="33" name="issueurgency">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>928</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="73" parent="34" name="issuedefinition">
+    <column id="61" parent="33" name="issuedefinition">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>829</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="74" parent="34" name="issueuseremail">
+    <column id="62" parent="33" name="issueuseremail">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>776</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="75" parent="34" name="issuetype">
+    <column id="63" parent="33" name="issuetype">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>931</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="76" parent="34" name="issuecomment">
+    <column id="64" parent="33" name="issuecomment">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>884</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="77" parent="34" name="issue_pk">
+    <index id="65" parent="33" name="issue_pk">
       <ObjectId>24576</ObjectId>
       <StateNumber>525</StateNumber>
       <ColNames>issueid</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="78" parent="34" name="issue_pk">
+    <key id="66" parent="33" name="issue_pk">
       <ObjectId>24577</ObjectId>
       <StateNumber>525</StateNumber>
       <ColNames>issueid</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>issue_pk</UnderlyingIndexName>
     </key>
-    <column id="79" parent="35" name="id">
+    <column id="67" parent="34" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1149</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="80" parent="35" name="brand">
+    <column id="68" parent="34" name="brand">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1149</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="81" parent="35" name="color">
+    <column id="69" parent="34" name="color">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1149</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="82" parent="35" name="name">
+    <column id="70" parent="34" name="name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1149</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="83" parent="35" name="os">
+    <column id="71" parent="34" name="os">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1149</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="84" parent="35" name="production_year">
+    <column id="72" parent="34" name="production_year">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1149</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="85" parent="35" name="screen_size">
+    <column id="73" parent="34" name="screen_size">
       <Position>7</Position>
       <DataType>double precision|0s</DataType>
       <StateNumber>1149</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="86" parent="35" name="comment">
+    <column id="74" parent="34" name="comment">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1156</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="87" parent="35" name="mobile_phone_pkey">
+    <index id="75" parent="34" name="mobile_phone_pkey">
       <ObjectId>98318</ObjectId>
       <StateNumber>1149</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="88" parent="35" name="mobile_phone_pkey">
+    <key id="76" parent="34" name="mobile_phone_pkey">
       <ObjectId>98319</ObjectId>
       <StateNumber>1149</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>mobile_phone_pkey</UnderlyingIndexName>
     </key>
-    <column id="89" parent="36" name="identity_number">
+    <column id="77" parent="35" name="identity_number">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1166</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="90" parent="36" name="mobile_no">
+    <column id="78" parent="35" name="mobile_no">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1166</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="91" parent="36" name="name">
+    <column id="79" parent="35" name="name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1166</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="92" parent="36" name="salary">
+    <column id="80" parent="35" name="salary">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1166</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="93" parent="36" name="surname">
+    <column id="81" parent="35" name="surname">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1166</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="94" parent="36" name="city">
+    <column id="82" parent="35" name="city">
       <Position>9</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1234</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="95" parent="36" name="score">
+    <column id="83" parent="35" name="score">
       <Position>10</Position>
       <DataType>double precision|0s</DataType>
       <StateNumber>1242</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <index id="96" parent="36" name="person_pkey">
+    <index id="84" parent="35" name="person_pkey">
       <ObjectId>106507</ObjectId>
       <StateNumber>1166</StateNumber>
       <ColNames>identity_number</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="97" parent="36" name="person_pkey">
+    <key id="85" parent="35" name="person_pkey">
       <ObjectId>106508</ObjectId>
       <StateNumber>1166</StateNumber>
       <ColNames>identity_number</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>person_pkey</UnderlyingIndexName>
     </key>
-    <column id="98" parent="37" name="id">
+    <column id="86" parent="36" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1167</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="99" parent="37" name="score">
+    <column id="87" parent="36" name="score">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1167</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="100" parent="37" name="score_pkey">
+    <index id="88" parent="36" name="score_pkey">
       <ObjectId>106512</ObjectId>
       <StateNumber>1167</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="101" parent="37" name="score_pkey">
+    <key id="89" parent="36" name="score_pkey">
       <ObjectId>106513</ObjectId>
       <StateNumber>1167</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>score_pkey</UnderlyingIndexName>
     </key>
-    <column id="102" parent="38" name="userid">
+    <column id="90" parent="37" name="userid">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1390,50 +1319,50 @@ false posixrules
       <DefaultExpression>nextval(&apos;test_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="103" parent="38" name="username">
+    <column id="91" parent="37" name="username">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="104" parent="38" name="usersurname">
+    <column id="92" parent="37" name="usersurname">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>520</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="105" parent="38" name="userpassword">
+    <column id="93" parent="37" name="userpassword">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>521</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="106" parent="38" name="useremail">
+    <column id="94" parent="37" name="useremail">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>522</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="107" parent="38" name="userrolee">
+    <column id="95" parent="37" name="userrolee">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>571</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="108" parent="38" name="userissue">
+    <column id="96" parent="37" name="userissue">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>773</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="109" parent="38" name="users_pk">
+    <index id="97" parent="37" name="users_pk">
       <ObjectId>24585</ObjectId>
       <StateNumber>528</StateNumber>
       <ColNames>userid</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="110" parent="38" name="users_pk">
+    <key id="98" parent="37" name="users_pk">
       <ObjectId>24586</ObjectId>
       <StateNumber>528</StateNumber>
       <ColNames>userid</ColNames>

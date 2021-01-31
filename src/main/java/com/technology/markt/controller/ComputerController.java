@@ -1,9 +1,8 @@
 package com.technology.markt.controller;
 
-import com.technology.markt.domain.Comments;
 import com.technology.markt.domain.Computer;
-import com.technology.markt.domain.MobilePhone;
-import com.technology.markt.service.CommentsService;
+import com.technology.markt.domain.ComputerComments;
+import com.technology.markt.service.ComputerCommentsService;
 import com.technology.markt.service.ComputerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,36 +14,35 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
 
 @Controller
 public class ComputerController {
     ComputerService computerService;
-    CommentsService commentsService;
+    ComputerCommentsService computerCommentsService;
 
     @Autowired
-    public ComputerController(ComputerService computerService, CommentsService commentsService) {
+    public ComputerController(ComputerService computerService, ComputerCommentsService computerCommentsService) {
         this.computerService = computerService;
-        this.commentsService = commentsService;
+        this.computerCommentsService = computerCommentsService;
     }
 
     @RequestMapping("/addComputer")
     public ModelAndView getComputerInsertionPage(){
         Map<String, Object> model = new HashMap<String, Object>();
-        model.put("computer", new Computer());
-        return new ModelAndView("addComputer", model);
+        model.put("computers", computerService.listAllComputers());
+        model.put("comment", new ComputerComments());
+        return new ModelAndView( "addComputer", model);
     }
 
     @RequestMapping(value="/addComputer", method= RequestMethod.POST)
-    public String handleComputerForm(@ModelAttribute("computer") Computer computer, BindingResult bindingResult) throws SQLException {
+    public String handleComputerForm(@ModelAttribute("comment") ComputerComments computerComments, BindingResult bindingResult) throws SQLException {
         if(bindingResult.hasErrors()){
             return "addComputer";
         }
-        String header = computer.getName();
-        Comments comment = new Comments();
-        comment.setName(header);
-        commentsService.addComment(comment);
-        computerService.addComputer(computer);
+        computerCommentsService.addComputerComments(computerComments);
         return "redirect:/";
     }
 
