@@ -34,43 +34,57 @@
         </ul>
     </div>
 </nav>
-<form class="needs-validation" th:action="@{/addComputer}" th:object="${comment}" th:method="post">
+<form class="needs-validation" th:action="@{/search}" th:method="post">
     <div class="form-column">
         <div class="col-md-4 mb-3">
-            <label>Computer Brand</label>
-            <select th:field="*{compBrand}" class="form-control form-control-sm" id="compBrand">
+            <label>Select Device Type</label>
+            <select class="form-control form-control-sm" id="devices" onchange="myFunction(this.value)">
+                <option value="select_device">Select a Device</option>
+                <option value="computer">Computer</option>
+                <option value="mobile_phone">Mobile Phone</option>
+            </select>
+        </div>
+
+        <div class="col-md-4 mb-3" style="display: none" id="computer_brand">
+            <label >Select Computer Brand</label>
+            <select class="form-control form-control-sm">
                 <option value="">Select a Brand</option>
-                <option th:each="comp:${computers}"
-                        th:value="${comp.brand}"
-                        th:selected="${comp.brand}"
-                        th:text="${comp.brand}">
-                </option>
+                <option value="computer">Computer</option>
             </select>
         </div>
-        <div class="col-md-4 mb-3">
-            <label>Computer Operating System</label>
-            <select th:field="*{commentCompOs}" class="form-control form-control-sm" id="commentCompOs">
-                <option value="">Select Computer OS</option>
-                <option th:each="comp:${computers}"
-                        th:value="${comp.os}"
-                        th:selected="${comp.os}"
-                        th:text="${comp.os}">
-                </option>
+
+        <div class="col-md-4 mb-3" style="display: none" id="phone_brand">
+            <label >Select Mobile Phone Brand</label>
+            <select class="form-control form-control-sm">
+                <option value="">Select a Brand</option>
+                <option value="phone">Phone</option>
             </select>
         </div>
-    <div class="col-md-4 mb-3">
-        <label>Computer Comment</label>
-        <div class="input-group">
-            <input type="text" class="form-control" id="validationTooltip07" placeholder="Enter Computer Comment" aria-describedby="validationTooltipUsernamePrepend" th:field="*{commentComp}"/>
-        </div>
+
     </div>
 
-    <button class="btn btn-primary" type="submit">Insert</button>
-    </div>
+
 </form>
 
 
+<script>
+    function myFunction(val) {
+        if(val === "computer"){
+            document.getElementById("computer_brand").style.display = "list-item";
+            document.getElementById("phone_brand").style.display = "none";
+        }
+        else if(val === "mobile_phone"){
+            document.getElementById("computer_brand").style.display = "none";
+            document.getElementById("phone_brand").style.display = "list-item";
+        }
+        else if(val === "select_device"){
+            document.getElementById("computer_brand").style.display = "none";
+            document.getElementById("phone_brand").style.display = "none";
+        }
+    }
 
+
+</script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

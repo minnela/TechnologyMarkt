@@ -20,14 +20,11 @@ import java.util.Map;
 
 @Controller
 public class ComputerController {
+    @Autowired
     ComputerService computerService;
+    @Autowired
     ComputerCommentsService computerCommentsService;
 
-    @Autowired
-    public ComputerController(ComputerService computerService, ComputerCommentsService computerCommentsService) {
-        this.computerService = computerService;
-        this.computerCommentsService = computerCommentsService;
-    }
 
     @RequestMapping("/addComputer")
     public ModelAndView getComputerInsertionPage(){
@@ -45,6 +42,9 @@ public class ComputerController {
         computerCommentsService.addComputerComments(computerComments);
         return "redirect:/";
     }
+
+
+
 
 
 

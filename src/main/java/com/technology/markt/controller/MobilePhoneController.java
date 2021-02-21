@@ -15,12 +15,8 @@ import java.sql.SQLException;
 
 @Controller
 public class MobilePhoneController {
-    MobilePhoneService mobilePhoneService;
-
     @Autowired
-    public MobilePhoneController(MobilePhoneService mobilePhoneService) {
-        this.mobilePhoneService = mobilePhoneService;
-    }
+    MobilePhoneService mobilePhoneService;
 
     @RequestMapping("/addMobilePhone")
     public ModelAndView getMobilePhoneInsertionPage(){

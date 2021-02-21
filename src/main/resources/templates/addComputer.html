@@ -28,7 +28,7 @@
                 <a class="nav-link" href="/addComputer">Insert Computer</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/issues">eklenecek</a>
+                <a class="nav-link" href="/search">Search Device</a>
             </li>
 
         </ul>
@@ -36,10 +36,6 @@
 </nav>
 <form class="needs-validation" th:action="@{/addComputer}" th:object="${comment}" th:method="post">
     <div class="form-column">
-        <div class="col-md-4 mb-3">
-            <label for="validationTooltip02">Header</label>
-            <input type="text" class="form-control" id="validationTooltip02" placeholder="Enter Blog Header" />
-        </div>
         <div class="col-md-4 mb-3">
             <label>Computer Brand</label>
             <select th:field="*{compBrand}" class="form-control form-control-sm" id="compBrand">
@@ -70,6 +66,7 @@
     </div>
 
     <button class="btn btn-primary" type="submit">Insert</button>
+    </div>
 </form>
 
 
